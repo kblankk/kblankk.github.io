@@ -5,7 +5,7 @@ body {
     color: #333;
     height: 100vh;
     display: flex;
-    flex-direction:  column;
+    flex-direction: column;
     justify-content: space-between;
     position: relative;
     z-index: 1;
@@ -30,7 +30,6 @@ header {
     padding: 10px 0;
     text-align: center;
     height: 10px;
-   
 }
 
 ul {
@@ -43,22 +42,75 @@ ul li {
     display: inline;
     margin: 0 15px;
 }
+
 ul li a {
     color: #fff;
-    text-decoration: none ;
+    text-decoration: none;
 }
 
 main {
     position: relative;
     padding: 10px;
-    background-color: rgba(51, 51, 51, 0.8);
     border-radius: 10px;
     max-width: 800px;
     margin: auto;
     color: #fff;
 }
+section#home {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+    color: #fff;
+    gap: 40px;
+}
 
-footer {    
+section#home .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+section#home .text h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #dadbdb;
+}
+
+section#home .text .horizontal-texts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+section#home .text .horizontal-texts p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+}
+
+section#home .image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section#home img {
+    max-width: 250px;
+    border-radius: 20%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+
+
+
+
+
+footer {
     background-color: rgba(51, 51, 51, 0.8);
     color: #fff;
     text-align: center;
@@ -67,10 +119,4 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-section#home img {
-    max-width: 100px;
-    border-radius: 50%;
-    
 }
