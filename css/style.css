@@ -47,9 +47,11 @@ main {
     position: relative;
     padding: 10px;
     border-radius: 10px;
-    max-width: 800px;
-    margin: auto;
+    max-width: 100%;
+    margin: 0 auto;
     color: #fff;
+    display: flex;
+    justify-content: center;
 }
 
 section#home {
@@ -58,7 +60,8 @@ section#home {
     background-color: rgba(51, 51, 51, 0.8);
     border-radius: 10px;
     max-width: 1000px;
-    margin: 60px auto;
+    width: 100%;
+    margin-inline: auto;
     padding: 40px;
     gap: 40px;
     color: #fff;
