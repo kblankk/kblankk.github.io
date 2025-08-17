@@ -3,25 +3,21 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: relative;
     z-index: 1;
 }
 
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('../pngtree-background-wall-gray-black-bricks-image_2408221.jpg') no-repeat center top fixed;
+    background: url('../img/dark-desktop-wallpaper.jpg') no-repeat center top fixed;
     background-size: cover;
     z-index: -1;
-    opacity: 0.9;
+    opacity: 0.96;
 }
 
 header {
@@ -29,7 +25,6 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    height: 10px;
 }
 
 ul {
@@ -56,6 +51,7 @@ main {
     margin: auto;
     color: #fff;
 }
+
 section#home {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -64,8 +60,8 @@ section#home {
     max-width: 1000px;
     margin: 60px auto;
     padding: 40px;
-    color: #fff;
     gap: 40px;
+    color: #fff;
 }
 
 section#home .text {
@@ -105,11 +101,6 @@ section#home img {
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
 
-
-
-
-
-
 footer {
     background-color: rgba(51, 51, 51, 0.8);
     color: #fff;
@@ -119,4 +110,43 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    section#home {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin: 20px;
+        gap: 20px;
+    }
+
+    section#home .text h1 {
+        font-size: 1.6em;
+        text-align: center;
+    }
+
+    section#home .text .horizontal-texts {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section#home .text .horizontal-texts p {
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    section#home .image {
+        justify-content: center;
+        align-items: center;
+    }
+
+    section#home img {
+        max-width: 180px;
+    }
+
+    footer {
+        position: static;
+        margin-top: 40px;
+    }
 }
