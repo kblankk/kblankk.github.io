@@ -351,12 +351,13 @@ img {
     right: -15%;
     width: 70%;
     height: 120%;
-    background: url('../Kawaa.png') no-repeat center top;
-    background-size: contain;
-    opacity: 0.2;
+    background:
+        linear-gradient(to right, #0a0a0f 0%, rgba(10,10,15,0.6) 40%, transparent 70%),
+        linear-gradient(to top, #0a0a0f 0%, transparent 30%),
+        url('../Kawaa.png') no-repeat center top;
+    background-size: cover, cover, contain;
+    opacity: 0.35;
     z-index: 0;
-    mask-image: linear-gradient(to right, transparent 0%, black 60%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 60%);
 }
 
 /* Fade na base da seção home */
