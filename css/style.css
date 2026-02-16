@@ -347,26 +347,24 @@ img {
 .home::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -10%;
     right: -15%;
-    width: 65%;
-    height: 110%;
+    width: 70%;
+    height: 120%;
     background: url('../Kawaa.png') no-repeat center top;
     background-size: contain;
-    opacity: 0.4;
+    opacity: 0.35;
     z-index: 0;
-    mask-image: radial-gradient(
-        ellipse 70% 60% at 55% 40%,
-        rgba(0, 0, 0, 0.8) 10%,
-        rgba(0, 0, 0, 0.3) 40%,
-        transparent 60%
-    );
-    -webkit-mask-image: radial-gradient(
-        ellipse 70% 60% at 55% 40%,
-        rgba(0, 0, 0, 0.8) 10%,
-        rgba(0, 0, 0, 0.3) 40%,
-        transparent 60%
-    );
+    mask-image:
+        linear-gradient(to right, transparent 0%, black 35%, black 100%),
+        linear-gradient(to bottom, black 0%, black 70%, transparent 95%),
+        linear-gradient(to top, black 0%, black 85%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, black 35%, black 100%),
+        linear-gradient(to bottom, black 0%, black 70%, transparent 95%),
+        linear-gradient(to top, black 0%, black 85%, transparent 100%);
+    -webkit-mask-composite: source-in;
 }
 
 /* Fade na base da seção home */
