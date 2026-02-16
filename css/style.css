@@ -338,29 +338,45 @@ img {
     justify-content: center;
     padding: var(--nav-height) var(--spacing-md) var(--spacing-2xl);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Foto como plano de fundo */
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Retrato em preto e branco elegante.png') no-repeat center top;
+    background-size: cover;
+    opacity: 0.25;
+    z-index: 0;
+}
+
+/* Escurecimento por cima da foto */
+.home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(10, 10, 15, 0.3) 0%,
+        rgba(10, 10, 15, 0.6) 70%,
+        rgba(10, 10, 15, 0.95) 100%
+    );
+    z-index: 1;
 }
 
 .home__content {
     animation: fade-in-up 1s ease-out;
-}
-
-.home__image-wrapper {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto var(--spacing-lg);
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid var(--color-accent);
-    box-shadow: 0 0 30px var(--color-accent-glow), 0 0 60px rgba(0, 212, 255, 0.15);
-    animation: glow-pulse 3s ease-in-out infinite alternate;
-}
-
-.home__photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 15%;
-    display: block;
+    position: relative;
+    z-index: 2;
 }
 
 .home__title {
@@ -846,11 +862,6 @@ img {
         font-size: 2rem;
     }
 
-    .home__image-wrapper {
-        width: 150px;
-        height: 150px;
-    }
-
     .about__grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
@@ -903,11 +914,6 @@ img {
 
     .home__tagline {
         font-size: 0.95rem;
-    }
-
-    .home__image-wrapper {
-        width: 130px;
-        height: 130px;
     }
 
     .home__cta {
