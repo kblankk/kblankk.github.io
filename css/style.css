@@ -347,7 +347,7 @@ img {
 .home::before {
     content: "";
     position: absolute;
-    top: -10%;
+    top: 5%;
     right: -15%;
     width: 70%;
     height: 120%;
