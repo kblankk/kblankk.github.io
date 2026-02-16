@@ -342,7 +342,7 @@ img {
     overflow: hidden;
 }
 
-/* Foto como plano de fundo */
+/* Foto Kawaa como plano de fundo */
 .home::before {
     content: "";
     position: absolute;
@@ -350,7 +350,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('Retrato em preto e branco elegante.png') no-repeat center top;
+    background: url('../Kawaa.png') no-repeat center top;
     background-size: cover;
     opacity: 0.25;
     z-index: 0;
@@ -377,6 +377,25 @@ img {
     animation: fade-in-up 1s ease-out;
     position: relative;
     z-index: 2;
+}
+
+.home__image-wrapper {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto var(--spacing-lg);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--color-accent);
+    box-shadow: 0 0 30px var(--color-accent-glow), 0 0 60px rgba(0, 212, 255, 0.15);
+    animation: glow-pulse 3s ease-in-out infinite alternate;
+}
+
+.home__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    display: block;
 }
 
 .home__title {
@@ -862,6 +881,11 @@ img {
         font-size: 2rem;
     }
 
+    .home__image-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+
     .about__grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
@@ -914,6 +938,11 @@ img {
 
     .home__tagline {
         font-size: 0.95rem;
+    }
+
+    .home__image-wrapper {
+        width: 130px;
+        height: 130px;
     }
 
     .home__cta {
