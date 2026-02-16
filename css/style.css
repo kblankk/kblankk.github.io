@@ -230,6 +230,7 @@ img {
 /* Section animations */
 .about,
 .skills,
+.experience,
 .education,
 .projects,
 .contact {
@@ -238,9 +239,10 @@ img {
 
 .about { animation-delay: 0.1s; }
 .skills { animation-delay: 0.2s; }
-.education { animation-delay: 0.3s; }
-.projects { animation-delay: 0.4s; }
-.contact { animation-delay: 0.5s; }
+.experience { animation-delay: 0.3s; }
+.education { animation-delay: 0.4s; }
+.projects { animation-delay: 0.5s; }
+.contact { animation-delay: 0.6s; }
 
 /* ========================================
    Navigation
@@ -433,6 +435,11 @@ img {
     margin-bottom: var(--spacing-sm);
 }
 
+.about__text strong {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
 .about__info-cards {
     display: flex;
     flex-direction: column;
@@ -534,6 +541,13 @@ img {
 }
 
 /* ========================================
+   Experience Section
+   ======================================== */
+.experience {
+    padding: var(--spacing-section) 0;
+}
+
+/* ========================================
    Education Section (Timeline)
    ======================================== */
 .education {
@@ -615,6 +629,13 @@ img {
     font-size: 0.9rem;
     color: var(--color-text);
     line-height: 1.7;
+}
+
+.timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
 }
 
 /* ========================================
