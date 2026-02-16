@@ -642,6 +642,18 @@ img {
     margin-top: var(--spacing-sm);
 }
 
+.tag--link {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.tag--link:hover {
+    background: var(--color-accent);
+    color: #000;
+    border-color: var(--color-accent);
+}
+
 /* ========================================
    Projects Section
    ======================================== */
