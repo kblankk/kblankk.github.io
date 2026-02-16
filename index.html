@@ -1,38 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
+    <meta name="description" content="Portfólio de Kawã Crispim de Oliveira - Estudante de Ciências da Computação">
+    <title>Kawã Crispim | Portfólio</title>
 
-    <link href="css/style.css" rel="stylesheet"
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Portifólio</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-   <main>
-  <section id="home">
-    <div class="text">
-      <h1>Bem-vindo ao meu portifólio acadêmico</h1>
-      <p>Sou estudante do curso de Ciências da computação na faculdade Unianchieta, sempre buscando novos conhecimentos e habilidades.</p>
-      <p>Tenho conhecimentos em HTML, Desenvolvimento Mobile, CSS, entre outros...</p>
-    </div>
-    <div class="image">
-      <img src="WhatsApp Image 2025-08-14 at 20.05.23.jpeg" alt="Foto Perfil" width="400">
-    </div>
-  </section>
-</main>
 
-    <footer>
-        <p>&copy; 2025 - Kawã Crispim de Oliveira</p>
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#hero" class="nav__logo">&lt;KC /&gt;</a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item"><a href="#hero" class="nav__link">Início</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">Sobre Mim</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">Habilidades</a></li>
+                <li class="nav__item"><a href="#education" class="nav__link">Formação</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">Projetos</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__content">
+            <div class="hero__image-wrapper">
+                <img src="WhatsApp Image 2025-08-14 at 20.05.23.jpeg"
+                     alt="Foto de Kawã Crispim de Oliveira"
+                     class="hero__photo">
+            </div>
+            <h1 class="hero__title">Kawã Crispim de Oliveira</h1>
+            <p class="hero__subtitle">Estudante de Ciências da Computação</p>
+            <p class="hero__tagline">Desenvolvedor em formação, apaixonado por tecnologia e inovação.</p>
+            <div class="hero__cta">
+                <a href="#projects" class="btn btn--primary">Ver Projetos</a>
+                <a href="#contact" class="btn btn--outline">Contato</a>
+            </div>
+            <div class="hero__social">
+                <a href="https://github.com/kblankk" target="_blank" rel="noopener" class="hero__social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/kaw%C3%A3-oliveira-80303a368/" target="_blank" rel="noopener" class="hero__social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section__title">Sobre Mim</h2>
+            <div class="about__grid">
+                <div class="about__text">
+                    <p>Sou estudante do curso de Ciências da Computação na faculdade UniAnchieta, sempre buscando novos conhecimentos e habilidades na área de tecnologia.</p>
+                    <p>Minha paixão por desenvolvimento de software me motiva a explorar diferentes linguagens e frameworks, construindo projetos que unem criatividade e lógica.</p>
+                </div>
+                <div class="about__info-cards">
+                    <div class="about__info-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Ciências da Computação</h3>
+                        <p>UniAnchieta</p>
+                    </div>
+                    <div class="about__info-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Desenvolvedor</h3>
+                        <p>Full Stack em formação</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section__title">Habilidades</h2>
+            <div class="skills__grid">
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="skill-card__name">Python</h3>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__fill" style="--skill-level: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="skill-card__name">.NET</h3>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__fill" style="--skill-level: 65%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3 class="skill-card__name">CSS</h3>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__fill" style="--skill-level: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="skill-card__name">HTML</h3>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__fill" style="--skill-level: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3 class="skill-card__name">Git</h3>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__fill" style="--skill-level: 70%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card__icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="skill-card__name">Mobile</h3>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__fill" style="--skill-level: 60%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formação -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section__title">Formação</h2>
+            <div class="timeline">
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <span class="timeline__date">2023 — Presente</span>
+                        <h3 class="timeline__title">Bacharelado em Ciências da Computação</h3>
+                        <p class="timeline__institution">Centro Universitário Padre Anchieta (UniAnchieta)</p>
+                        <p class="timeline__description">Formação abrangente em ciência da computação, incluindo algoritmos, estruturas de dados, engenharia de software, banco de dados e desenvolvimento web e mobile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section__title">Projetos</h2>
+            <div class="projects__grid">
+                <article class="project-card">
+                    <div class="project-card__image project-card__image--1">
+                        <div class="project-card__overlay">
+                            <a href="https://github.com/kblankk" target="_blank" rel="noopener" class="btn btn--small"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Portfólio Pessoal</h3>
+                        <p class="project-card__description">Site de portfólio responsivo desenvolvido com HTML, CSS e design moderno com efeitos glass-morphism.</p>
+                        <div class="project-card__tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Responsivo</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card__image project-card__image--2">
+                        <div class="project-card__overlay">
+                            <a href="https://github.com/kblankk" target="_blank" rel="noopener" class="btn btn--small"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Aplicação .NET</h3>
+                        <p class="project-card__description">Projeto desenvolvido com .NET demonstrando conceitos de back-end e integração com banco de dados.</p>
+                        <div class="project-card__tags">
+                            <span class="tag">.NET</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card__image project-card__image--3">
+                        <div class="project-card__overlay">
+                            <a href="https://github.com/kblankk" target="_blank" rel="noopener" class="btn btn--small"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Script Python</h3>
+                        <p class="project-card__description">Automação e análise de dados utilizando Python com bibliotecas populares do ecossistema.</p>
+                        <div class="project-card__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Automação</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section__title">Contato</h2>
+            <p class="contact__text">Interessado em trabalhar junto? Entre em contato!</p>
+            <div class="contact__links">
+                <a href="kawabrein@gmail.com" class="contact__item">
+                    <i class="fas fa-envelope"></i>
+                    <span>seuemail@exemplo.com</span>
+                </a>
+                <a href="https://github.com/kblankk" target="_blank" rel="noopener" class="contact__item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/kblankk</span>
+                </a>
+                <a href="https://linkedin.com/in/" target="_blank" rel="noopener" class="contact__item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2025 Kawã Crispim de Oliveira. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const toggle = document.getElementById('nav-toggle');
+        const menu = document.getElementById('nav-menu');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('nav__menu--active');
+            toggle.querySelector('i').classList.toggle('fa-bars');
+            toggle.querySelector('i').classList.toggle('fa-xmark');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('nav__menu--active');
+                toggle.querySelector('i').classList.add('fa-bars');
+                toggle.querySelector('i').classList.remove('fa-xmark');
+            });
+        });
+    </script>
 </body>
 </html>
