@@ -329,9 +329,9 @@ img {
 }
 
 /* ========================================
-   Hero Section
+   Home Section
    ======================================== */
-.hero {
+.home {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -340,15 +340,15 @@ img {
     text-align: center;
 }
 
-.hero__content {
+.home__content {
     animation: fade-in-up 1s ease-out;
 }
 
-.hero__image-wrapper {
+.home__image-wrapper {
     margin-bottom: var(--spacing-lg);
 }
 
-.hero__photo {
+.home__photo {
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -359,7 +359,7 @@ img {
     margin: 0 auto;
 }
 
-.hero__title {
+.home__title {
     font-size: 3rem;
     font-weight: 700;
     color: var(--color-text-heading);
@@ -367,34 +367,34 @@ img {
     letter-spacing: -0.5px;
 }
 
-.hero__subtitle {
+.home__subtitle {
     font-size: 1.25rem;
     color: var(--color-accent);
     font-weight: 500;
     margin-bottom: var(--spacing-sm);
 }
 
-.hero__tagline {
+.home__tagline {
     font-size: 1.1rem;
     color: var(--color-text-muted);
     max-width: 500px;
     margin: 0 auto var(--spacing-lg);
 }
 
-.hero__cta {
+.home__cta {
     display: flex;
     gap: var(--spacing-sm);
     justify-content: center;
     margin-bottom: var(--spacing-lg);
 }
 
-.hero__social {
+.home__social {
     display: flex;
     gap: var(--spacing-md);
     justify-content: center;
 }
 
-.hero__social-link {
+.home__social-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -407,7 +407,7 @@ img {
     transition: all var(--transition-base);
 }
 
-.hero__social-link:hover {
+.home__social-link:hover {
     color: var(--color-accent);
     border-color: var(--color-accent);
     box-shadow: 0 0 15px var(--color-accent-glow);
@@ -826,11 +826,11 @@ img {
         visibility: visible;
     }
 
-    .hero__title {
+    .home__title {
         font-size: 2rem;
     }
 
-    .hero__photo {
+    .home__photo {
         width: 150px;
         height: 150px;
     }
@@ -877,29 +877,29 @@ img {
    Responsive - Mobile (480px)
    ======================================== */
 @media (max-width: 480px) {
-    .hero__title {
+    .home__title {
         font-size: 1.6rem;
     }
 
-    .hero__subtitle {
+    .home__subtitle {
         font-size: 1rem;
     }
 
-    .hero__tagline {
+    .home__tagline {
         font-size: 0.95rem;
     }
 
-    .hero__photo {
+    .home__photo {
         width: 130px;
         height: 130px;
     }
 
-    .hero__cta {
+    .home__cta {
         flex-direction: column;
         align-items: center;
     }
 
-    .hero__cta .btn {
+    .home__cta .btn {
         width: 100%;
         max-width: 220px;
         text-align: center;
