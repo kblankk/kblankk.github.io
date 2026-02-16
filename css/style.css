@@ -263,8 +263,8 @@ img {
 }
 
 .nav__container {
-    max-width: var(--container-max);
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     padding: 0 var(--spacing-md);
     width: 100%;
     display: flex;
