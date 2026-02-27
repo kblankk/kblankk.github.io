@@ -358,7 +358,7 @@ img {
     background:
         linear-gradient(to right, #0a0a0f 0%, rgba(10,10,15,0.6) 40%, transparent 70%),
         linear-gradient(to top, #0a0a0f 0%, transparent 30%),
-        url('../kawaa.png') no-repeat center 15%;
+        url('../Kawaa.png') no-repeat center 15%;
     background-size: cover, cover, contain;
     opacity: 0.35;
     z-index: 0;
