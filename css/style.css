@@ -1,6 +1,10 @@
 /* ========================================
    CSS Variables (Design Tokens)
    ======================================== */
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     /* Colors */
     --color-bg: #0a0a0f;
@@ -41,6 +45,52 @@
     --transition-fast: 0.2s ease;
     --transition-base: 0.3s ease;
     --transition-slow: 0.5s ease;
+
+    /* Light theme overrides */
+    --color-overlay-start: rgba(10, 10, 15, 0.92);
+    --color-overlay-mid: rgba(10, 10, 15, 0.7);
+    --color-overlay-end: rgba(10, 10, 15, 0.95);
+    --color-nav-bg: rgba(10, 10, 15, 0.85);
+    --color-nav-menu-bg: rgba(10, 10, 15, 0.95);
+    --color-home-gradient-solid: #0a0a0f;
+    --color-home-gradient-fade: rgba(10, 10, 15, 0.6);
+    --color-skill-bar-bg: rgba(255, 255, 255, 0.1);
+    --color-tag-bg: rgba(0, 212, 255, 0.08);
+    --color-tag-border: rgba(0, 212, 255, 0.3);
+    --color-btn-contrast: #000;
+    --wallpaper-opacity: 0.4;
+    --home-photo-opacity: 0.35;
+}
+
+/* ========================================
+   Light Theme
+   ======================================== */
+[data-theme="light"] {
+    --color-bg: #f0f2f5;
+    --color-bg-card: rgba(255, 255, 255, 0.8);
+    --color-bg-card-hover: rgba(255, 255, 255, 0.95);
+    --color-accent: #0099cc;
+    --color-accent-dark: #007aa3;
+    --color-accent-glow: rgba(0, 153, 204, 0.25);
+    --color-text: #2d3748;
+    --color-text-muted: #5a6577;
+    --color-text-heading: #1a202c;
+    --color-border: rgba(0, 0, 0, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: 1px solid rgba(0, 0, 0, 0.08);
+    --color-overlay-start: rgba(240, 242, 245, 0.95);
+    --color-overlay-mid: rgba(240, 242, 245, 0.8);
+    --color-overlay-end: rgba(240, 242, 245, 0.95);
+    --color-nav-bg: rgba(255, 255, 255, 0.85);
+    --color-nav-menu-bg: rgba(255, 255, 255, 0.95);
+    --color-home-gradient-solid: #f0f2f5;
+    --color-home-gradient-fade: rgba(240, 242, 245, 0.6);
+    --color-skill-bar-bg: rgba(0, 0, 0, 0.08);
+    --color-tag-bg: rgba(0, 153, 204, 0.08);
+    --color-tag-border: rgba(0, 153, 204, 0.3);
+    --color-btn-contrast: #fff;
+    --wallpaper-opacity: 0.15;
+    --home-photo-opacity: 0.2;
 }
 
 /* ========================================
@@ -80,7 +130,7 @@ body::before {
     background: url('../img/dark-desktop-wallpaper.jpg') no-repeat center center;
     background-size: cover;
     z-index: -2;
-    opacity: 0.4;
+    opacity: var(--wallpaper-opacity);
 }
 
 /* Dark overlay gradient */
@@ -93,9 +143,9 @@ body::after {
     height: 100vh;
     background: linear-gradient(
         180deg,
-        rgba(10, 10, 15, 0.92) 0%,
-        rgba(10, 10, 15, 0.7) 50%,
-        rgba(10, 10, 15, 0.95) 100%
+        var(--color-overlay-start) 0%,
+        var(--color-overlay-mid) 50%,
+        var(--color-overlay-end) 100%
     );
     z-index: -1;
 }
@@ -159,7 +209,7 @@ img {
 
 .btn--primary {
     background: var(--color-accent);
-    color: #000;
+    color: var(--color-btn-contrast);
 }
 
 .btn--primary:hover {
@@ -175,7 +225,7 @@ img {
 
 .btn--outline:hover {
     background: var(--color-accent);
-    color: #000;
+    color: var(--color-btn-contrast);
 }
 
 .btn--small {
@@ -190,9 +240,9 @@ img {
     font-size: 0.75rem;
     font-weight: 500;
     color: var(--color-accent);
-    border: 1px solid rgba(0, 212, 255, 0.3);
+    border: 1px solid var(--color-tag-border);
     border-radius: 20px;
-    background: rgba(0, 212, 255, 0.08);
+    background: var(--color-tag-bg);
 }
 
 /* ========================================
@@ -253,7 +303,7 @@ img {
     left: 0;
     width: 100%;
     height: var(--nav-height);
-    background: rgba(10, 10, 15, 0.85);
+    background: var(--color-nav-bg);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--color-border);
@@ -352,11 +402,11 @@ img {
     width: 70%;
     height: 120%;
     background:
-        linear-gradient(to right, #0a0a0f 0%, rgba(10,10,15,0.6) 40%, transparent 70%),
-        linear-gradient(to top, #0a0a0f 0%, transparent 30%),
+        linear-gradient(to right, var(--color-home-gradient-solid) 0%, var(--color-home-gradient-fade) 40%, transparent 70%),
+        linear-gradient(to top, var(--color-home-gradient-solid) 0%, transparent 30%),
         url('../Kawaa.png') no-repeat center 15%;
     background-size: cover, cover, contain;
-    opacity: 0.35;
+    opacity: var(--home-photo-opacity);
     z-index: 0;
 }
 
@@ -565,7 +615,7 @@ img {
 .skill-card__bar {
     width: 100%;
     height: 6px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-skill-bar-bg);
     border-radius: 3px;
     overflow: hidden;
 }
@@ -649,8 +699,8 @@ img {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: rgba(0, 212, 255, 0.08);
-    border: 1px solid rgba(0, 212, 255, 0.25);
+    background: var(--color-tag-bg);
+    border: 1px solid var(--color-tag-border);
     border-radius: 6px;
     padding: 4px 12px;
     margin-bottom: var(--spacing-xs);
@@ -690,7 +740,7 @@ img {
 
 .tag--link:hover {
     background: var(--color-accent);
-    color: #000;
+    color: var(--color-btn-contrast);
     border-color: var(--color-accent);
 }
 
@@ -836,6 +886,63 @@ img {
 }
 
 /* ========================================
+   Theme Toggle Button
+   ======================================== */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 50%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+}
+
+.theme-toggle:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 12px var(--color-accent-glow);
+}
+
+/* Smooth theme transition */
+body,
+body::before,
+body::after,
+.nav,
+.nav__menu,
+.skill-card,
+.about__info-card,
+.timeline__content,
+.project-card,
+.contact__item,
+.tag,
+.btn {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Light mode project card gradients */
+[data-theme="light"] .project-card__image--1 {
+    background: linear-gradient(135deg, #a8d8ea, #c4e0e5, #e0f0f0);
+}
+
+[data-theme="light"] .project-card__image--2 {
+    background: linear-gradient(135deg, #b8c6db, #c9d6e3, #e2ebf0);
+}
+
+[data-theme="light"] .project-card__image--3 {
+    background: linear-gradient(135deg, #d1d5db, #e5e7eb, #f3f4f6);
+}
+
+[data-theme="light"] .project-card__overlay {
+    background: rgba(0, 153, 204, 0.12);
+}
+
+/* ========================================
    Footer
    ======================================== */
 .footer {
@@ -863,7 +970,7 @@ img {
         top: var(--nav-height);
         left: 0;
         width: 100%;
-        background: rgba(10, 10, 15, 0.95);
+        background: var(--color-nav-menu-bg);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         flex-direction: column;

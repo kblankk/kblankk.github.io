@@ -34,6 +34,9 @@
                 <li class="nav__item"><a href="#projects" class="nav__link">Projetos</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">Contato</a></li>
             </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
 
@@ -331,6 +334,35 @@
                 toggle.querySelector('i').classList.add('fa-bars');
                 toggle.querySelector('i').classList.remove('fa-xmark');
             });
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            themeIcon.classList.replace(
+                savedTheme === 'light' ? 'fa-moon' : 'fa-sun',
+                savedTheme === 'light' ? 'fa-sun' : 'fa-moon'
+            );
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+
+            if (next === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+
+            themeIcon.classList.toggle('fa-moon');
+            themeIcon.classList.toggle('fa-sun');
+            localStorage.setItem('theme', next);
         });
     </script>
 </body>
