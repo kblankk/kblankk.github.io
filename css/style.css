@@ -1,10 +1,6 @@
 /* ========================================
    CSS Variables (Design Tokens)
    ======================================== */
-html {
-    scroll-behavior: smooth;
-}
-
 :root {
     /* Colors */
     --color-bg: #0a0a0f;
