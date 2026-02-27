@@ -34,9 +34,13 @@
                 <li class="nav__item"><a href="#projects" class="nav__link">Projetos</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">Contato</a></li>
             </ul>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
-                <i class="fas fa-moon"></i>
-            </button>
+            <label class="theme-switch" aria-label="Alternar tema">
+                <input type="checkbox" id="theme-toggle">
+                <span class="theme-switch__slider">
+                    <i class="fas fa-moon theme-switch__icon theme-switch__icon--dark"></i>
+                    <i class="fas fa-sun theme-switch__icon theme-switch__icon--light"></i>
+                </span>
+            </label>
         </div>
     </header>
 
@@ -337,32 +341,23 @@
         });
 
         // Theme toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = themeToggle.querySelector('i');
+        const themeCheckbox = document.getElementById('theme-toggle');
 
         // Load saved theme
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            themeIcon.classList.replace(
-                savedTheme === 'light' ? 'fa-moon' : 'fa-sun',
-                savedTheme === 'light' ? 'fa-sun' : 'fa-moon'
-            );
+        if (savedTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            themeCheckbox.checked = true;
         }
 
-        themeToggle.addEventListener('click', () => {
-            const current = document.documentElement.getAttribute('data-theme');
-            const next = current === 'light' ? 'dark' : 'light';
-
-            if (next === 'dark') {
-                document.documentElement.removeAttribute('data-theme');
-            } else {
+        themeCheckbox.addEventListener('change', () => {
+            if (themeCheckbox.checked) {
                 document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
             }
-
-            themeIcon.classList.toggle('fa-moon');
-            themeIcon.classList.toggle('fa-sun');
-            localStorage.setItem('theme', next);
         });
     </script>
 </body>
